@@ -1,0 +1,47 @@
+depcheck
+George Vlahavas
+%%mtime(%m/%d/%Y)
+
+%!target: man
+%!encoding: utf-8
+
+= NAME =
+
+depcheck - a tool that helps users check a dependency file (.dep)
+against their system.
+
+= SYNOPSIS =
+
+**depcheck** [//OPTIONS//]
+
+= DESCRIPTION =
+
+**depcheck** is a tool that helps users check a dependency file (.dep)
+as used in Salix against locally installed packages, in order to check
+if there are any missing dependencies. Suggestion (.sug) or conflicts
+(.con) files can also be checked. Dependencies can be separated by
+commas, spaces or new lines.
+
+= OPTIONS =
+
+: **-f, --file** //depfile//
+specify a locally stored dependency file (.dep) to use. A suggestion
+file (.sug) or a conflicts file (.con) can be used as well. You cannot
+use *--file* and *--url* at the same time.
+
+: **-u, --url** //url//
+specify a url to a dependency (.dep) to use. A suggestion file (.sug) or
+a conflicts file (.con) can be used as well. You cannot use *--url* and
+*--file* at the same time
+
+: **-n, --no-color**
+by default depcheck will color the output for missing dependencies red.
+Use this if you want to disable colored output.
+
+: **-h, --help**
+Display help and exit.
+
+
+= AUTHORS =
+
+- George Vlahavas <vlahavas~at~gmail~dot~com>
